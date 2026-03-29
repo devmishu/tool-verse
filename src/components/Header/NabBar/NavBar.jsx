@@ -2,8 +2,8 @@ import React from 'react';
 import Logo from '../../../assets/logo.png'
 import NavMenu from './NavMenu';
 import { ShoppingCart } from 'lucide-react';
-const navList = ['Products', 'Features', 'Pricing', 'Testimonials', 'FAQ'];
-const NavBar = () => {
+
+const NavBar = ({navList}) => {
     return (
         <div className="bg-base-100 shadow-md flex sticky top-0 z-50">
             <div className='navbar  container mx-auto p-5'>

@@ -1,10 +1,10 @@
 import NavBar from "../Header/NabBar/NavBar";
 import Hero from "./Hero/Hero";
 
-const Header = () => {
+const Header = ({navList}) => {
     return (
         <header>
-            <NavBar />
+            <NavBar navList={navList}/>
             <Hero />
             
         </header>
