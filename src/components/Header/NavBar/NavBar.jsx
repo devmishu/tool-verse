@@ -3,7 +3,7 @@ import Logo from '../../../assets/logo.png'
 import NavMenu from './NavMenu';
 import { ShoppingCart } from 'lucide-react';
 
-const NavBar = ({navList}) => {
+const NavBar = ({ navList }) => {
     return (
         <div className="bg-base-100 shadow-md flex sticky top-0 z-50">
             <div className='navbar  container mx-auto p-5'>
@@ -14,7 +14,7 @@ const NavBar = ({navList}) => {
                         </div>
                         <ul
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            {navList.map(item => <NavMenu item={item} />)}
+                            {navList.map((item, index) => <NavMenu key={index} item={item} index={index} />)}
 
                         </ul>
                     </div>

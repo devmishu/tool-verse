@@ -1,4 +1,4 @@
-import NavBar from "../Header/NabBar/NavBar";
+import NavBar from "../Header/NavBar/NavBar";
 import Hero from "./Hero/Hero";
 
 const Header = ({navList}) => {
