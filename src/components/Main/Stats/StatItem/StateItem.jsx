@@ -1,4 +1,4 @@
-import PricingCard from '../../../../UI/PricingCard';
+
 import StateCard from '../../../../UI/StateCard';
 
 const StateItem = ({ itemData }) => {
