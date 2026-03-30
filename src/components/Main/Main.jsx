@@ -5,6 +5,8 @@ import StateItem from './Stats/StatItem/StateItem';
 import { Suspense } from 'react';
 import StatCartItem from './Stats/StatCartItem/StatCartItem';
 import StepsSection from './StepsSection/StepsSection';
+import CounterSection from './CounterSection/CounterSection';
+import TestimonialSection from './TestimonialSection/TestimonialSection';
 
 
 const fetchTransparentPricing = async () => {
@@ -14,9 +16,9 @@ const fetchTransparentPricing = async () => {
 
 const Main = ({ itemData, setActiveTab, activeTab, carts, setCarts }) => {
     const transparentPricingPromise = fetchTransparentPricing();
-    console.log(itemData);
     return (
-        <div className='space-y-15 p-5'>
+        <div className='space-y-15 '>
+            <CounterSection />
             <StateHeader activeTab={activeTab} setActiveTab={setActiveTab} carts={carts} />
 
             {
@@ -26,11 +28,14 @@ const Main = ({ itemData, setActiveTab, activeTab, carts, setCarts }) => {
                     carts={carts}
                 /> : <StatCartItem carts={carts} setCarts={setCarts} />
             }
+
             <StepsSection />
 
             <Suspense fallback={<span className="loading loading-spinner loading-xs"></span>}>
                 <TransparentPricing transparentPricingPromise={transparentPricingPromise} />
             </Suspense>
+
+            <TestimonialSection />
         </div>
     );
 };

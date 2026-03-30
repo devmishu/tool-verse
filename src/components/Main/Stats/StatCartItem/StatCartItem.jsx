@@ -1,11 +1,17 @@
 
+import { toast } from 'react-toastify';
 import CartCard from '../../../../UI/CartCard';
-import cartIcon from '../../../../assets/products/shopping-cart.png'
+import cartIcon from '/products/shopping-cart.png'
 
 const StatCartItem = ({ carts, setCarts }) => {
     const totalPrice = carts.reduce((sum, cart) => {
         return sum + cart.price;
     }, 0);
+
+    const handleSchekout = () => {
+        setCarts([]);
+        toast.success("Checkout successful");
+    }
 
     return (
         <div className='container mx-auto p-5  border border-gray-200  rounded-sm space-y-3 '>
@@ -31,17 +37,19 @@ const StatCartItem = ({ carts, setCarts }) => {
             }
 
             {
-                carts.length !== 0 && <button onClick={() => setCarts([])} className='btn btn-primary rounded-full w-full'>Proceed to Checkout</button>
+                carts.length !== 0 && <button onClick={handleSchekout} className='btn btn-primary rounded-full w-full'>Proceed to Checkout</button>
             }
 
-            {carts.length === 0 && <div className='flex flex-col justify-center items-center gap-3 py-10 '>
-                <h2 className='text-xl text-gray-400 '>Your Cart is Empty</h2>
-                <img src={cartIcon} alt="" />
-            </div>
+            {
+                carts.length === 0 && <div className='flex flex-col justify-center items-center gap-3 py-10 '>
+                    <img className='w-10' src={cartIcon} alt="" />
+                    <h2 className='text-xl text-gray-400 '>Your Cart is Empty</h2>
+                    
+                </div>
             }
 
 
-        </div>
+        </div >
     );
 };
 

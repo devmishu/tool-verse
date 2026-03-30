@@ -7,10 +7,10 @@ const NavBar = ({ navList, carts }) => {
     return (
         <div className="bg-base-100 shadow-md flex">
             <div className='navbar  container mx-auto p-5'>
-                <div className="navbar-start space-x-2">
+                <div className="navbar-start space-x-2 hover:cursor-pointer">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden hover:bg-transparent hover:border-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 " fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                         </div>
                         <ul
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
@@ -18,7 +18,7 @@ const NavBar = ({ navList, carts }) => {
 
                         </ul>
                     </div>
-                    <a className='w-15 sm:w-full'><img className='hover:cursor-pointer' src={Logo} alt="" /></a>
+                    <a className='w-15  sm:w-full'><img className='hover:cursor-pointer' src={Logo} alt="" /></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 ">
@@ -31,7 +31,9 @@ const NavBar = ({ navList, carts }) => {
                     <div className='relative'>
                         <ShoppingCart className='hover:cursor-pointer' />
 
-                        <div className='bg-red-500 w-4 h-4 rounded-full flex justify-center items-center p-2 absolute -top-1 -right-2'><span className='text-[14px]'>{carts.length}</span></div>
+                        {
+                            carts.length !== 0 && <div className='bg-red-500 w-4 h-4 rounded-full flex justify-center items-center p-2 absolute -top-1 -right-2'><span className='text-[14px]'>{carts.length}</span></div>
+                        }
                     </div>
 
                     <h3 className='hover:cursor-pointer'>Login</h3>

@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 
 
 const StateCard = ({ item, title, badge, image, description, price, billing, features, setCarts, carts }) => {
@@ -6,9 +7,10 @@ const StateCard = ({ item, title, badge, image, description, price, billing, fea
     const handleCarts = (item) => {
         const isExit = carts.find(cart => cart.id === item.id)
         if (isExit) {
-            return;
+            return toast.error("Already Added");
         }
         setCarts([...carts, item])
+        toast.success("Add to Cart Successfully");
     }
 
     return (
@@ -16,7 +18,7 @@ const StateCard = ({ item, title, badge, image, description, price, billing, fea
             <div className="card-body">
 
                 <div className="flex flex-col items-center absolute top-3 right-3  ">
-                    <span className={`text-center border-none badge badge-xs badge-warning rounded-full p-3 font-medium text-[14px]
+                    <span className={`text-center border-none badge badge-xs badge-warning rounded-full p-3 py-4 font-medium text-[14px]
                     ${badge === 'Best Seller' && 'bg-[#FEF3C6] text-[#BB4D00]'}
                     ${badge === 'Popular' && 'bg-[#E1E7FF] text-blue-500'}
                     ${badge === 'New' && 'bg-[#DBFCE7] text-[#0A883E]'}
@@ -37,8 +39,8 @@ const StateCard = ({ item, title, badge, image, description, price, billing, fea
 
                         {
                             features.map((feature, index) => <li key={index}
-                            className="text-gray-500 text-[16px]"
-                             >
+                                className="text-gray-500 text-[16px]"
+                            >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                                 <span>{feature}</span>
                             </li>)
@@ -47,9 +49,9 @@ const StateCard = ({ item, title, badge, image, description, price, billing, fea
                 </div>
 
                 <div className="mt-6">
-                    <button onClick={() => handleCarts(item)} className={`btn btn-primary btn-block rounded-full
+                    <button onClick={() => handleCarts(item)} className={`btn btn-primary btn-block rounded-full font-bold
                     ${isAdded && 'bg-green-700'}
-                        `}> {isAdded ? 'Added To Cart' : 'Buy Now'}</button>
+                        `}> {isAdded ? '✓ Added To Cart' : 'Buy Now'}</button>
                 </div>
             </div>
         </div>

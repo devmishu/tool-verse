@@ -1,6 +1,6 @@
-import { AiFillInstagram } from 'react-icons/ai';
+
 import footerLogo from '../../assets/footer-logo.png'
-import { FaFacebookSquare } from 'react-icons/fa';
+import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = ({ navList }) => {
@@ -33,9 +33,9 @@ const Footer = ({ navList }) => {
                 <nav>
                     <h6 className="font-semibold text-xl text-white">Social Links</h6>
                     <div className='flex gap-3 '>
-                        <AiFillInstagram className='hover:cursor-pointer'/>
-                        <FaFacebookSquare className='hover:cursor-pointer'/>
-                        <FaXTwitter className='hover:cursor-pointer'/>
+                        <FaInstagram className='hover:cursor-pointer'/>
+                        <FaFacebookSquare className='hover:cursor-pointer' />
+                        <FaXTwitter className='hover:cursor-pointer' />
                     </div>
                 </nav>
             </div>

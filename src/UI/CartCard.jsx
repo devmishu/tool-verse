@@ -1,8 +1,10 @@
+import { toast } from "react-toastify";
 
 const CartCard = ({ carts, cart,setCarts, image, title, price }) => {
     const handleRemoveCart = (cart) => {
         const filterCart = carts.filter(filCart => filCart.id !== cart.id);
         setCarts(filterCart);
+        toast.success("Item removed from cart");
     }
     return (
         <div className="p-5 bg-[#F9FAFC] rounded-md flex justify-between items-center ">

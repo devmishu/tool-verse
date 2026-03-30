@@ -3,6 +3,7 @@ import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 import Main from "./components/Main/Main";
 import Hero from '../src/components/Header/Hero/Hero'
+import { ToastContainer } from "react-toastify";
 const navList = ['Products', 'Features', 'Pricing', 'Testimonials', 'FAQ'];
 
 const fetchItem = async () => {
@@ -14,6 +15,7 @@ const itemDataPromise = fetchItem();
 
 function App() {
   const itemData = use(itemDataPromise);
+  
   const [activeTab, setActiveTab] = useState("Products");
   const [carts, setCarts] = useState([]);
 
@@ -30,6 +32,8 @@ function App() {
 
       />
       <Footer navList={navList} />
+
+      <ToastContainer />
     </>
   )
 }

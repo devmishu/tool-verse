@@ -31,7 +31,7 @@ const stepsData = [
 
 const StepsSection = () => {
     return (
-        <div className="container mx-auto p-5 space-y-10">
+        <div className="bg-[#F9FAFC] py-30  space-y-10">
             <div className="flex gap-4 flex-col  justify-center items-center">
                 <h2 className="text-center text-4xl md:text-5xl font-bold">Get Started in 3 Steps</h2>
                 <p className="text-center text-gray-500 ">Start using premium digital tools in minutes, not hours.</p>

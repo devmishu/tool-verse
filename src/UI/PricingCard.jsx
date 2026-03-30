@@ -2,7 +2,7 @@
 const PricingCard = ({ planName, tagline, price, billingCycle, features, buttonText, isPopular }) => {
     return (
         <div className={`card w-full   ${isPopular ? 'bg-primary text-white' : 'bg-[#F2F2F2]'} shadow-md`}>
-            <div className="card-body relative ">
+            <div className="card-body relative flex-1 ">
                 {isPopular && <div className="flex flex-col items-center ">
                     <span className="text-center badge bg-[#FEF3C6] text-[#BB4D00] border-none font-medium text-[14px] badge-xs badge-warning absolute -top-4  p-4 rounded-full">Most Popular</span>
                 </div>}
@@ -10,9 +10,9 @@ const PricingCard = ({ planName, tagline, price, billingCycle, features, buttonT
                 <div className="flex flex-col justify-between">
                     <h2 className="text-3xl font-bold">{planName}</h2>
                     <p className={`text-gray-500 ${isPopular && 'text-pink-400'}  text-[16px]`}>{tagline}</p>
-                    <span className="text-xl mt-3 ">${price}/<small>{billingCycle}</small> </span>
+                    <span className="mt-3  text-xl "> <span className="text-3xl font-bold ">${price}</span><small className="text-gray-400">/{billingCycle}</small> </span>
                 </div>
-                <div>
+                <div className="flex-1">
                     <ul className="mt-6 flex flex-col gap-2 text-xs">
 
                         {
@@ -27,7 +27,7 @@ const PricingCard = ({ planName, tagline, price, billingCycle, features, buttonT
                 </div>
 
                 <div className="mt-6">
-                    <button className={` ${isPopular ? 'btn' : 'btn btn-primary'}  btn-block rounded-full`}>{buttonText}</button>
+                    <button className={` ${isPopular ? 'btn text-primary' : 'btn btn-primary'}  btn-block rounded-full font-bold`}>{buttonText}</button>
                 </div>
             </div>
         </div>
