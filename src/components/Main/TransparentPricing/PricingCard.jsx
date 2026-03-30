@@ -1,7 +1,7 @@
 
 const PricingCard = ({ planName, tagline, price, billingCycle, features, buttonText, isPopular }) => {
     return (
-        <div className={`card w-96 ${isPopular ? 'bg-primary text-white' : 'bg-[#F2F2F2]'} shadow-md`}>
+        <div className={`card w-full   ${isPopular ? 'bg-primary text-white' : 'bg-[#F2F2F2]'} shadow-md`}>
             <div className="card-body relative ">
                 {isPopular && <div className="flex flex-col items-center ">
                     <span className="text-center badge badge-xs badge-warning absolute -top-4  p-4 rounded-full">Most Popular</span>
