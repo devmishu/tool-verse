@@ -5,7 +5,7 @@ import { ShoppingCart } from 'lucide-react';
 
 const NavBar = ({ navList, carts }) => {
     return (
-        <div className="bg-base-100 shadow-md flex sticky top-0 z-50">
+        <div className="bg-base-100 shadow-md flex">
             <div className='navbar  container mx-auto p-5'>
                 <div className="navbar-start space-x-2">
                     <div className="dropdown">
@@ -18,7 +18,7 @@ const NavBar = ({ navList, carts }) => {
 
                         </ul>
                     </div>
-                    <a><img className='hover:cursor-pointer' src={Logo} alt="" /></a>
+                    <a className='w-15 sm:w-full'><img className='hover:cursor-pointer' src={Logo} alt="" /></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 ">
@@ -29,7 +29,7 @@ const NavBar = ({ navList, carts }) => {
                 </div>
                 <div className="navbar-end space-x-4">
                     <div className='relative'>
-                        <ShoppingCart className='hover:cursor-pointer'/>
+                        <ShoppingCart className='hover:cursor-pointer' />
 
                         <div className='bg-red-500 w-4 h-4 rounded-full flex justify-center items-center p-2 absolute -top-1 -right-2'><span className='text-[14px]'>{carts.length}</span></div>
                     </div>

@@ -2,7 +2,7 @@ import { use, useState } from "react";
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 import Main from "./components/Main/Main";
-
+import Hero from '../src/components/Header/Hero/Hero'
 const navList = ['Products', 'Features', 'Pricing', 'Testimonials', 'FAQ'];
 
 const fetchItem = async () => {
@@ -18,8 +18,9 @@ function App() {
   const [carts, setCarts] = useState([]);
 
   return (
-    <div className="space-y-60">
+    <>
       <Header navList={navList} carts={carts} />
+      <Hero/>
       <Main
         itemData={itemData}
         setActiveTab={setActiveTab}
@@ -29,7 +30,7 @@ function App() {
 
       />
       <Footer navList={navList} />
-    </div>
+    </>
   )
 }
 

@@ -23,7 +23,7 @@ const StateTab = ({ activeTab, setActiveTab, carts }) => {
           ${activeTab === "cart" ? "tab-active bg-primary text-white" : ""}
         `}
             >
-                cart({carts.length})
+                Cart({carts.length})
             </a>
         </div>
     );

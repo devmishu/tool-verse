@@ -1,12 +1,9 @@
 import NavBar from "../Header/NavBar/NavBar";
-import Hero from "./Hero/Hero";
 
 const Header = ({ navList, carts }) => {
     return (
-        <header>
+        <header className=" top-0 sticky z-50">
             <NavBar navList={navList} carts={carts} />
-            <Hero />
-
         </header>
     );
 };

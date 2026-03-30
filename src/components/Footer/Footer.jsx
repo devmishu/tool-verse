@@ -18,22 +18,24 @@ const Footer = ({ navList }) => {
                 <nav>
                     <h6 className="font-semibold text-xl text-white">Company</h6>
 
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                    <a className="link link-hover">About</a>
+                    <a className="link link-hover">Blog</a>
+                    <a className="link link-hover">Careers</a>
+                    <a className="link link-hover">Press</a>
                 </nav>
                 <nav>
-                    <h6 className="font-semibold text-xl text-white">Legal</h6>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <h6 className="font-semibold text-xl text-white">Resources</h6>
+                    <a className="link link-hover">Documentation</a>
+                    <a className="link link-hover">Help Center</a>
+                    <a className="link link-hover">Community</a>
+                    <a className="link link-hover">Contact</a>
                 </nav>
                 <nav>
                     <h6 className="font-semibold text-xl text-white">Social Links</h6>
                     <div className='flex gap-3 '>
-                        <AiFillInstagram />
-                        <FaFacebookSquare />
-                        <FaXTwitter />
+                        <AiFillInstagram className='hover:cursor-pointer'/>
+                        <FaFacebookSquare className='hover:cursor-pointer'/>
+                        <FaXTwitter className='hover:cursor-pointer'/>
                     </div>
                 </nav>
             </div>
