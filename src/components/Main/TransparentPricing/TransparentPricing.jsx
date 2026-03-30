@@ -1,5 +1,5 @@
 import { use } from "react";
-import PricingCard from "./PricingCard";
+import PricingCard from "../../../UI/PricingCard";
 
 const TransparentPricing = ({ transparentPricingPromise }) => {
     const transparentPricingData = use(transparentPricingPromise);

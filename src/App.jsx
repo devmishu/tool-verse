@@ -1,17 +1,25 @@
+import { use } from "react";
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 import Main from "./components/Main/Main";
 
 const navList = ['Products', 'Features', 'Pricing', 'Testimonials', 'FAQ'];
 
+const fetchItem = async () => {
+  const res = await fetch('/itemData.json')
+  return res.json();
+}
+const itemDataPromise = fetchItem();
+
 
 function App() {
+  const itemData = use(itemDataPromise);
   return (
-    <>
+    <div className="space-y-60">
       <Header navList={navList} />
-      <Main />
+      <Main itemData={itemData} />
       <Footer navList={navList} />
-    </>
+    </div>
   )
 }
 

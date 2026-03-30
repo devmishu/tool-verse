@@ -14,7 +14,7 @@ const NavBar = ({ navList }) => {
                         </div>
                         <ul
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            {navList.map((item, index) => <NavMenu key={index} item={item} index={index} />)}
+                            {navList.map((item, index) => <NavMenu key={index} item={item} />)}
 
                         </ul>
                     </div>
@@ -22,7 +22,9 @@ const NavBar = ({ navList }) => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 ">
-                        {navList.map(item => <NavMenu item={item} />)}
+                        {navList.map((item, index) => <NavMenu
+                            key={index}
+                            item={item} />)}
                     </ul>
                 </div>
                 <div className="navbar-end space-x-4">

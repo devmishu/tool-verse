@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "title": "AI Writing Pro",
+        "badge": "Best Seller",
+        "image": "../src/assets/products/writing_2327400 1.png",
+        "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+        "price": 29,
+        "billing": "Mo",
+        "features": [
+            "Unlimited AI generations",
+            "50+ writing templates",
+            "Grammar checker"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Design Templates Pack",
+        "badge": "Popular",
+        "image": "../src/assets/products/design-tool.png",
+        "description": "2000+ premium templates for social media, presentations, and marketing materials.",
+        "price": 49,
+        "billing": "One-Time",
+        "features": [
+            "2000+ templates",
+            "Monthly updates",
+            "Commercial license"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Premium Stock Assets",
+        "badge": "New",
+        "image": "../src/assets/products/operation.png",
+        "description": "Access millions of royalty-free photos, videos, and graphics for your projects.",
+        "price": 19,
+        "billing": "Mo",
+        "features": [
+            "10M+ assets",
+            "Commercial use",
+            "No attribution"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Automation Toolkit",
+        "badge": "Popular",
+        "image": "../src/assets/products/operation.png",
+        "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
+        "price": 79,
+        "billing": "Mo",
+        "features": [
+            "50+ automations",
+            "API access",
+            "Custom workflows"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Resume Builder Pro",
+        "badge": "New",
+        "image": "../src/assets/products/portfolio.png",
+        "description": "Create professional resumes and cover letters that land interviews.",
+        "price": 15,
+        "billing": "One-Time",
+        "features": [
+            "100+ templates",
+            "ATS optimization",
+            "Export to PDF"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Social Media Content Kit",
+        "badge": "Best Seller",
+        "image": "../src/assets/products/social-media.png",
+        "description": "Complete toolkit for creating engaging social media content across all platforms.",
+        "price": 39,
+        "billing": "Mo",
+        "features": [
+            "5000+ assets",
+            "Scheduler included",
+            "Analytics dashboard"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Logo Maker AI",
+        "badge": "New",
+        "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400",
+        "description": "Design unique, high-resolution brand logos instantly with AI-driven concepts.",
+        "price": 25,
+        "billing": "One-Time",
+        "features": [
+            "Vector exports",
+            "Brand kit guide",
+            "Full copyrights"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Video Editor Pro",
+        "badge": "Popular",
+        "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400",
+        "description": "Cloud-based video editing with professional transitions and stock music.",
+        "price": 45,
+        "billing": "Mo",
+        "features": [
+            "4K exporting",
+            "AI captions",
+            "Multi-track timeline"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "SEO Audit Suite",
+        "badge": "Best Seller",
+        "image": "https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?w=400",
+        "description": "Rank higher with comprehensive website audits and keyword tracking tools.",
+        "price": 59,
+        "billing": "Mo",
+        "features": [
+            "Backlink analysis",
+            "Competitor tracking",
+            "Weekly reports"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Lead Gen Master",
+        "badge": "Hot",
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
+        "description": "Find and export targeted business leads with verified contact information.",
+        "price": 89,
+        "billing": "Mo",
+        "features": [
+            "Email verification",
+            "CRM integration",
+            "Unlimited exports"
+        ]
+    }
+]
