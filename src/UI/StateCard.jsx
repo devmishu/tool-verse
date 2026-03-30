@@ -1,6 +1,16 @@
-import React from 'react';
+import { useState } from "react";
 
-const StateCard = ({ title, badge, image, description, price, billing, features }) => {
+const StateCard = ({ item, title, badge, image, description, price, billing, features, setCarts, carts }) => {
+    const isAdded = carts.find(cart => cart.id === item.id);
+
+    const handleCarts = (item) => {
+        const isExit = carts.find(cart => cart.id === item.id)
+        if (isExit) {
+            return;
+        }
+        setCarts([...carts, item])
+        setCartAdded('Added To Cart');
+    }
 
     return (
         <div className="card w-full  bg-transparent shadow border border-gray-200">
@@ -36,7 +46,9 @@ const StateCard = ({ title, badge, image, description, price, billing, features 
                 </div>
 
                 <div className="mt-6">
-                    <button className="btn btn-primary btn-block rounded-full">Bye Now</button>
+                    <button onClick={() => handleCarts(item)} className={`btn btn-primary btn-block rounded-full
+                    ${isAdded && 'bg-green-700'}
+                        `}> {isAdded ? 'Added To Cart' : 'Buy Now'}</button>
                 </div>
             </div>
         </div>

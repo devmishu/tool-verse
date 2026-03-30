@@ -3,7 +3,7 @@ import Logo from '../../../assets/logo.png'
 import NavMenu from './NavMenu';
 import { ShoppingCart } from 'lucide-react';
 
-const NavBar = ({ navList }) => {
+const NavBar = ({ navList, carts }) => {
     return (
         <div className="bg-base-100 shadow-md flex sticky top-0 z-50">
             <div className='navbar  container mx-auto p-5'>
@@ -28,7 +28,12 @@ const NavBar = ({ navList }) => {
                     </ul>
                 </div>
                 <div className="navbar-end space-x-4">
-                    <ShoppingCart className='hover:cursor-pointer' />
+                    <div className='relative'>
+                        <ShoppingCart className='hover:cursor-pointer'/>
+
+                        <div className='bg-red-500 w-4 h-4 rounded-full flex justify-center items-center p-2 absolute -top-1 -right-2'><span className='text-[14px]'>{carts.length}</span></div>
+                    </div>
+
                     <h3 className='hover:cursor-pointer'>Login</h3>
                     <a className="btn btn-primary rounded-full hover:cursor-pointer">Get Started</a>
                 </div>

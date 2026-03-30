@@ -1,4 +1,4 @@
-const StateTab = ({ activeTab, setActiveTab }) => {
+const StateTab = ({ activeTab, setActiveTab, carts }) => {
     return (
         <div
             role="tablist"
@@ -15,15 +15,15 @@ const StateTab = ({ activeTab, setActiveTab }) => {
                 Products
             </a>
 
-            {/* Cart */}
+            {/* carts */}
             <a
-                onClick={() => setActiveTab("Cart")}
+                onClick={() => setActiveTab("cart")}
                 role="tab"
                 className={`tab rounded-full w-24 
-          ${activeTab === "Cart" ? "tab-active bg-primary text-white" : ""}
+          ${activeTab === "cart" ? "tab-active bg-primary text-white" : ""}
         `}
             >
-                Cart()
+                cart({carts.length})
             </a>
         </div>
     );

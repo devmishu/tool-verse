@@ -5,21 +5,25 @@ import StateItem from './Stats/StatItem/StateItem';
 import { Suspense } from 'react';
 import StatCartItem from './Stats/StatCartItem/StatCartItem';
 
+
 const fetchTransparentPricing = async () => {
     const res = await fetch('/transparentPricingData.json')
     return res.json();
 }
 
-const Main = ({ itemData, setActiveTab, activeTab }) => {
+const Main = ({ itemData, setActiveTab, activeTab, carts, setCarts }) => {
     const transparentPricingPromise = fetchTransparentPricing();
     console.log(itemData);
     return (
         <div className='space-y-20'>
-            <StateHeader activeTab={activeTab} setActiveTab={setActiveTab} />
+            <StateHeader activeTab={activeTab} setActiveTab={setActiveTab} carts={carts} />
+
             {
                 activeTab === 'Products' ? <StateItem
                     itemData={itemData}
-                /> : <StatCartItem />
+                    setCarts={setCarts}
+                    carts={carts}
+                /> : <StatCartItem carts={carts}/>
             }
 
             <Suspense fallback={<span className="loading loading-spinner loading-xs"></span>}>

@@ -15,14 +15,18 @@ const itemDataPromise = fetchItem();
 function App() {
   const itemData = use(itemDataPromise);
   const [activeTab, setActiveTab] = useState("Products");
+  const [carts, setCarts] = useState([]);
 
   return (
     <div className="space-y-60">
-      <Header navList={navList} />
+      <Header navList={navList} carts={carts} />
       <Main
         itemData={itemData}
         setActiveTab={setActiveTab}
         activeTab={activeTab}
+        setCarts={setCarts}
+        carts={carts}
+
       />
       <Footer navList={navList} />
     </div>
